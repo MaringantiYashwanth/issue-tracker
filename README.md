@@ -4,7 +4,7 @@ This implementation provides:
 
 ## BugService Features:
 - **CRUD operations** for bugs
-- **Repository method implementations** for all your custom queries
+- **Repository method implementations** for all the custom queries
 - **Status management** with automatic comment logging
 - **Assignment tracking** with history
 - **Priority updates** with audit trail
@@ -59,6 +59,7 @@ This implementation provides:
     "content": "Found the root cause - missing event listener",
     "authorName": "John Doe"
 }
+```
 
 Spring Security in progress
 This implementation provides:
