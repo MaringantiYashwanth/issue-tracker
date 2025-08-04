@@ -39,6 +39,12 @@ public class BugController {
         return ResponseEntity.ok(bugs);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Bug> getBugById(@PathVariable String id)
+    {
+        Bug updatedBug = bugService.getBugById(id);
+        return ResponseEntity.ok(updatedBug);
+    }
     @PatchMapping("/{bugId}/status")
     public ResponseEntity<Bug> updateBugStatus(@PathVariable String bugId, @RequestBody StatusUpdateRequest request) {
         Bug updatedBug = bugService.updatedBugStatus(bugId, request.getStatus());

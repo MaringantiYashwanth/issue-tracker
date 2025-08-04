@@ -93,5 +93,11 @@ public class BugService {
     public List<Bug> getOpenBugsInProject(String projectId) {
         return findByProjectIdAndStatus(projectId, BugStatus.OPEN);
     }
+
+    public Bug getBugById(String bugId) {
+        return bugRepository.findById(bugId)
+                .orElseThrow(() -> new BugNotFoundException("Bug not found with id: " + bugId));
+    }
+
 }
 
